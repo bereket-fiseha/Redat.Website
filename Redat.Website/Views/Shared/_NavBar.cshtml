@@ -1,0 +1,61 @@
+﻿<div class="main-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="left-top">
+                    <a class="new-btn-d br-2" href=@Url.Action("RequestMedicalService","Home")><span>Request Medical Service</span></a>
+                    <div class="mail-b"><a href=@Url.Action("Register","Patient")> Create Account</a></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="wel-nots">
+                    <p>Welcome to Redat!</p>
+                </div>
+                <div class="right-top">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End top bar -->
+<!-- Start header -->
+<header class="top-header">
+    <nav class="navbar header-nav navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/redat.jpg" alt="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                <ul class="navbar-nav">
+                    <li><a class="nav-link active" id="home" href=@Url.Action("Index","Home")>Home</a></li>
+                    <li><a class="nav-link" id="about_us" href="#about">About Us</a></li>
+                    <li><a class="nav-link" id="subscription" href="#subscribe">Subscription</a></li>
+                    <li><a class="nav-link" id="medical_service" href="#appointment">Medical Services</a></li>
+
+                    <li><a class="nav-link" id="news" href="#media_news">News</a></li>
+                    <li><a class="nav-link" id="gallery"  href=@Url.Action("Gallery","Home")>Gallery</a></li>
+                    <li><a class="nav-link" id="contact"  href="#contact_us">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End header -->
+<script src="~/js/jquery.min.js"></script>
+<script>
+    $(".nav-link").on("click", function () {
+
+        $(".active").removeClass("active");
+        console.log(this.id)
+        $("#"+this.id).addClass("active");
+    })
+
+</script>

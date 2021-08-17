@@ -1,0 +1,797 @@
+﻿<script>
+    let map;
+    var latLong = { lat: 8.989967, lng: 38.784839 };
+    function initMap() {
+        const myLatLng = { lat: -25.363, lng: 131.044 };
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: latLong,
+            zoom: 14,
+        });
+        var marker = new google.maps.Marker({
+            position: latLong,
+
+
+
+        });
+        marker.setMap(map);
+        console.log(marker);
+    }</script>
+<!--Stripe Payment Modal -->
+<div class="modal fade" id="stripePayment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/create-checkout-session" method="POST">
+                    <script src="https://checkout.stripe.com/v2/checkout.js"
+                            data-keyboard="thiss"
+                            data-local="auto"
+                            data-description="charge"
+                            data-amount="800"
+                            class="stripe-button"></script>
+                    <button type="submit">Checkout</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Stripe Payment -->
+<!-- Modal -->
+<!-- Alert Modal -->
+
+@{ if (TempData["status"] != null && TempData["status"].ToString() == "success")
+    {
+        <script>
+            alert("Success! ,your payment has been processed successfully!");</script>
+
+    }
+    else if (TempData["status"] != null && TempData["status"].ToString() == "error")
+    {
+
+        <script>
+            alert("Error!,Please enter valid card number and cvc!")
+        </script>
+    }
+
+}
+
+}
+<!--End Alert Modal -->
+<!-- LOADER -->
+<div id="preloader">
+    <div class="loader">
+        <img src="images/preloader.gif" alt="" />
+    </div>
+</div>
+<!-- END LOADER -->
+<!-- Start Banner -->
+<div class="ulockd-home-slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="pogoSlider" id="js-main-slider">
+                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image: url(images/slider-01.jpg);">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                        <div class="lbox-details">
+                            <h1>Welcome to Redat Lab</h1>
+                            <p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>
+                            <a href="#" class="btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url(images/slider-02.jpg);">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                        <div class="lbox-details">
+                            <h1>Welcome to Home care service</h1>
+                            <p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum</p>
+                            <a href="#appointment" class="btn">Appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image: url(images/redat_img_slider1.jfif);">
+                    <div class="lbox-caption pogoSlider-slide-element">
+                        <div class="lbox-details">
+                            <h1>Welcome to Health Lab</h1>
+                            <p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>
+                            <a href="#" class="btn">Contact Us</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- .pogoSlider -->
+        </div>
+    </div>
+</div>
+
+<!-- End Banner -->
+<!-- Start About us -->
+<div id="about" class="m-5 about-box">
+    <div class="about-a1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="wow bounceInLeft" data-wow-delay="0.1s">
+
+                        <div class="title-box">
+
+                            <h2>About Us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row align-items-center about-main-info">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <h2> Welcome to Redat </h2>
+                            <p>
+                                The REDAT system is based on the premise whereby the health care provider will provide health care services to the patient at their location as opposed to the patient having to visit the health facility.
+                            </p>
+                            <p>The need for this model of health care is anchored by the shortfalls present in developing nations , 
+                            that include inadequate health care facilities and
+                            poor transport infrastructure  to retain adequate and specialised medical resources in the health facilities, to offer critical medical services needed by the community. </p>
+                            <a href="#" class="butt">Read More</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="about-m">
+                                <ul id="banner">
+                                    <li>
+                                        <img src="images/about-img-01.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="images/about-img-02.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="images/about-img-03.jpg" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About us -->
+<!-- Start subscription -->
+<div id="subscribe" class="services-box">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="wow lightSpeedIn" data-wow-delay="0.1s">
+
+                    <div class="title-box">
+                        <h2>Subscriptions</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-carousel owl-theme">
+
+                    <div class="item">
+                        <div class="wow bounceInUp" data-wow-delay="0.2s">
+
+                            <ul id="promobox">
+
+                                <li>
+                                    <h3>Subscription One</h3>
+                                    <div class="pricebox">
+                                        <p>From Only</p>
+                                        <p class="lrg">&dollar;6.99</p>
+                                        <input class="amount" value="500" hidden />
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> access to modern teleclinic</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> 10% discount on laboratory service</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i>post care follow up</li>
+
+                                        <li><i class="fa fa-chevron-circle-right"></i> 30-Day Money Back Guarantee</li>
+                                    </ul>
+                                    <form style="float:left" action="@Url.Action("ChargeCustomer","Home")" method="POST">
+                                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                                data-key="pk_test_51JHqpuCUcptI1p6qn9AbO2NXdYXpqd8QrKBsnEVKVGW5TL972wHO2yDAe3V3jHbX2ccQ8DHnKbBdTNKwsTb7SFOb00zQrkif3w"
+                                                data-amount='$(".amount").val()'
+                                                data-name="payment with stripe"
+                                                data-locale="auto">
+                                        </script>
+
+                                        <button class="butt" type="submit" href="#"><i class="fa fa-shopping-cart"></i> Order Now</button>
+                                    </form>
+                                    <p><a class="butt" href="#"> Details</a></p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="wow bounceInUp" data-wow-delay="0.2s">
+
+                            <ul id="promobox">
+                                <li class="two">
+                                    <h3>Subscription Two</h3>
+                                    <div class="pricebox">
+                                        <p>From Only</p>
+                                        <p class="lrg">&dollar;5.99</p>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+
+                                        <li><i class="fa fa-chevron-circle-right"></i> unlimited whatsapp chat with doctor</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> unlimited free message</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> free access to tele-clinic</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual wellness checkup</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+
+                                    </ul>
+                                    <p><a class="butt" href="#"><i class="fa fa-shopping-cart"></i> Order Now</a></p>
+                                    <p><a class="butt" href="#">Details</a></p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="wow bounceInUp" data-wow-delay="0.2s">
+
+                            <ul id="promobox">
+                                <li class="three">
+                                    <h3>Subscription Three</h3>
+                                    <div class="pricebox">
+                                        <p>From Only</p>
+                                        <p class="lrg">&dollar;4.99</p>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-chevron-circle-right"></i> free access to tele-clinic</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual wellness checkup</li>
+
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> access to modern teleclinic</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> 10% discount on laboratory service</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+                                    </ul>
+                                    <p><a class="butt" href="#"><i class="fa fa-shopping-cart"></i> Order Now</a></p>
+                                    <p><a class="butt" href="#">Details</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="wow bounceInUp" data-wow-delay="0.1s">
+
+                            <ul id="promobox">
+                                <li>
+                                    <h3>Subscription Four</h3>
+                                    <div class="pricebox">
+                                        <p>From Only</p>
+                                        <p class="lrg">&dollar;6.99</p>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-chevron-circle-right"></i> free access to tele-clinic</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual wellness checkup</li>
+
+                                        <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> access to modern teleclinic</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> 10% discount on laboratory service</li>
+                                        <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+                                    </ul>
+                                    <p><a class="butt" href="#"><i class="fa fa-shopping-cart"></i> Order Now</a></p>
+                                    <p><a class="butt" href="#">Details</a></p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <ul id="promobox">
+                            <li class="two">
+                                <h3>Subscription Five</h3>
+                                <div class="pricebox">
+                                    <p>From Only</p>
+                                    <p class="lrg">&dollar;5.99</p>
+                                </div>
+                                <ul>
+                                    <li><i class="fa fa-chevron-circle-right"></i> free access to tele-clinic</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> annual wellness checkup</li>
+
+                                    <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> access to modern teleclinic</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> 10% discount on laboratory service</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+                                </ul>
+                                <p><a class="butt" href="#"><i class="fa fa-shopping-cart"></i> Order Now</a></p>
+                                <p><a class="butt" href="#">Details</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <ul id="promobox">
+                            <li class="three">
+                                <h3>Subscription Six</h3>
+                                <div class="pricebox">
+                                    <p>From Only</p>
+                                    <p class="lrg">&dollar;4.99</p>
+                                </div>
+                                <ul>
+                                    <li><i class="fa fa-chevron-circle-right"></i> free access to tele-clinic</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> annual wellness checkup</li>
+
+                                    <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> access to modern teleclinic</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> 10% discount on laboratory service</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+                                </ul>
+                                <p><a class="butt" href="#"><i class="fa fa-shopping-cart"></i> Order Now</a></p>
+                                <p><a class="butt" href="#">Details</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <ul id="promobox">
+                            <li>
+                                <h3>Subscription Seven</h3>
+                                <div class="pricebox">
+                                    <p>From Only</p>
+                                    <p class="lrg">&dollar;6.99</p>
+                                </div>
+                                <ul>
+                                    <li><i class="fa fa-chevron-circle-right"></i> free access to tele-clinic</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> annual wellness checkup</li>
+
+                                    <li><i class="fa fa-chevron-circle-right"></i> annual medical checkup</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> access to modern teleclinic</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i> 10% discount on laboratory service</li>
+                                    <li><i class="fa fa-chevron-circle-right"></i>  10% discount on pharmacy service</li>
+                                </ul>
+                                <p><a class="butt" href="#"><i class="fa fa-shopping-cart"></i> Order Now</a></p>
+                                <p><a class="butt" href="#">Details</a></p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-4"></div>
+            <div class="col-lg-4 col-md-8">Get More Subscription Here    <button class="butt">See More</button></div>
+        </div>
+    </div>
+</div>
+<!-- End Subscription -->
+
+
+<div class="row mt-5">
+    <div class="col-lg-12">
+        <div class="title-box">
+            <h2>Our Services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        </div>
+    </div>
+</div>
+<div id="service" class="mb-5 services wow fadeIn">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                <div class="row inner-services">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon1.png" alt="#" /></span>
+                                <h4>PREMIUM FACILITIES</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon2.png" alt="#" /></span>
+                                <h4>LARGE LABORATORY</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon3.png" alt="#" /></span>
+                                <h4>DETAILED SPECIALIST</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon4.png" alt="#" /></span>
+                                <h4>HOME CARE CENTER</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon5.png" alt="#" /></span>
+                                <h4>MEDICAL CHECKUPS</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="wow fadeInRight" data-wow-delay="0.2s">
+
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon6.png" alt="#" /></span>
+                                <h4>ANYTIME BLOOD BANK</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="wow fadeInLeft" data-wow-delay="0.2s">
+
+                    <div class="appointment-form">
+                        <h3><span>+</span> Book Appointment</h3>
+                        <div class="form">
+                            <form action="index.html">
+                                <fieldset>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="text" id="name" placeholder="Your Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="email" placeholder="Email Address" id="email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>Day</option>
+                                                    <option>Sunday</option>
+                                                    <option>Monday</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>Time</option>
+                                                    <option>AM</option>
+                                                    <option>PM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>Doctor Name</option>
+                                                    <option>Mr.XYZ</option>
+                                                    <option>Mr.ABC</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="center"><button class="butt" type="submit">Submit</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="wow lightSpeedIn" data-wow-delay="0.1s">
+            <div class="title-box">
+                <h2>Redat Tele Health</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Redat -->
+<div id="redat" class="mb-5 mt-5  container">
+    <div class="row">
+
+        <div class="col-md-3 col-sm-6">
+            <div class="counter fadeInUp">
+                <div class="counter-icon">
+                    <i class="fa fa-users"></i>
+                </div>
+                <h3>Clients</h3>
+                <span class="counter-value">170</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter orange fadeInUp">
+                <div class="counter-icon">
+                    <i class="fa fa-user-md"></i>
+                </div>
+                <h3>Health Care Providers</h3>
+                <span class="counter-value">160</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter green fadeInUp">
+                <div class="counter-icon">
+                    <i class="fa fa-bookmark"></i>
+                </div>
+                <h3>Subscriptions</h3>
+                <span class="counter-value fadeInUp">181</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter blue fadeInUp">
+                <div class="counter-icon">
+                    <i class="fa fa-product-hunt"></i>
+                </div>
+                <h3>Medical Packages</h3>
+                <span class="counter-value fadeInUp">181</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Redat-->
+<!-- Start Blog -->
+<div id="media_news" class="p-5 blog-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wow lightSpeedIn" data-wow-delay="0.1s">
+                    <div class="title-box">
+                        <h2>Latest News</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="blog-inner">
+                    <div class="blog-img">
+                        <img class="img-fluid" src="images/blog-img-01.jpg" alt="" />
+                    </div>
+                    <div class="item-meta">
+                        <a href="#"><i class="fa fa-comments-o"></i> 5 Comment </a>
+
+                        <span class="dti">25 July 2018</span>
+                    </div>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+                    <a class="butt" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="blog-inner">
+                    <div class="blog-img">
+                        <img class="img-fluid" src="images/blog-img-02.jpg" alt="" />
+                    </div>
+                    <div class="item-meta">
+                        <a href="#"><i class="fa fa-comments-o"></i> 5 Comment </a>
+
+                        <span class="dti">25 July 2018</span>
+                    </div>
+                    <h2>Proin vel sem ut lorem rhoncus lacinia. </h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+                    <a class="butt" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="blog-inner">
+                    <div class="blog-img">
+                        <img class="img-fluid" src="images/blog-img-03.jpg" alt="" />
+                    </div>
+                    <div class="item-meta">
+                        <a href="#"><i class="fa fa-comments-o"></i> 5 Comment </a>
+
+                        <span class="dti">25 July 2018</span>
+                    </div>
+                    <h2>Aliquam egestas magna a malesuada rutrum. </h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+                    <a class="butt" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-4"></div>
+            <div class="col-lg-4 col-md-8">Get More News Here    <button class="butt">See More</button></div>
+        </div>
+    </div>
+</div>
+<!-- End Blog -->
+<!-- Start Footer -->
+<div id="contact_us" class="row mt-5">
+    <div class="col-lg-12">
+        <div class="title-box">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+
+    <div class="m-4">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 ">
+
+                <h5>Our location</h5>
+          
+                <div class="wow fadeInDown" data-wow-delay="0.1s" id="map"></div>
+
+                <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBknDqVMV6zSUwigjuHAdcjIoOsOmqLMnQ&callback=initMap&libraries=&v=weekly"
+                        async></script>
+
+            </div>
+            <div class="col-sm-6 col-md-4 mt-2">
+                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                    <div class="widget">
+                        <h5>Contact Redat</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                                </span> Alem Building, Bole Addis Abeba
+                            </li>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+                                </span> Monday - Sunday, 8am to 10pm
+                            </li>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                                </span> +62 0888 904 711
+                            </li>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span> redat-app@infinity-et.com
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                    <div class="widget">
+                        <h5>Send Us Your Feedback</h5>
+                        <div>
+                            <form class="my-form">
+                                <div class="form-group">
+                                    <label for="form-name">Name:</label>
+                                    <input type="email" class="form-control" id="form-name" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email Address:</label>
+                                    <input type="email" class="form-control" id="form-email" placeholder="Email Address">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="form-message">Comment:</label>
+                                    <textarea class="form-control" id="form-message" placeholder="Message"></textarea>
+                                </div>
+                                <button class="mt-3 butt " type="submit">Send Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="text-left">
+                            <p>&copy;Copyright @DateTime.Now.Year - <span style="color:dodgerblue;font-size:1.1em">Redat</span>. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="wow fadeInRight" data-wow-delay="0.1s">
+                        <div class="text-right">
+                            <p>Designed by<span style="color:dodgerblue;font-size:1.1em"> INFINITY ADVANCED TECHNOLOGY SOLUTIONS PLC.</span></p>
+                        </div>
+                        <!--
+                            All links in the footer should remain intact.
+                            Licenseing information is available at: http://bootstraptaste.com/license/
+                            You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Medicio
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" id="scroll-to-top" class="new-btn-d br-2"><i class="fa fa-angle-up"></i></a>
+<style>
+    .stripe-button-el {
+        display: none
+    }
+</style>
+
+<style>
+    .my-form {
+        color: #305896;
+        font-size: small;
+    }
+
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    .my-form .form-control {
+        border-radius: 5%;
+    }
+</style>

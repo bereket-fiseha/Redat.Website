@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Redat.Website</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="~/css/pogo-slider.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/custom.css">
+    <link rel="stylesheet" href="~/css/jquery.jcarousel.css" type="text/css" media="all" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div>
+        <partial name="_NavBar.cshtml" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- ALL JS FILES -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/jquery.pogo-slider.min.js"></script>
+    <script src="~/js/slider-index.js"></script>
+    <script src="~/js/smoothscroll.js"></script>
+    <script src="~/js/TweenMax.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/form-validator.min.js"></script>
+    <script src="~/js/contact-form-script.js"></script>
+    <script src="~/js/isotope.min.js"></script>
+    <script src="~/js/images-loded.min.js"></script>
+
+    <script type="text/javascript" src="~/js/func.js"></script>
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+
+    <script src="~/js/custom_org.js"></script>
+
+    <script src="~/js/custom_second.js"></script>
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

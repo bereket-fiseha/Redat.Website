@@ -27,8 +27,11 @@ C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\sco
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Redat.Website.TagHelpers.input.cache
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Redat.Website.TagHelpers.output.cache
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Redat.Website.RazorCoreGenerate.cache
+C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\Gallery.cshtml.g.cs
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\RequestMedicalService.cshtml.g.cs
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Patient\Register.cshtml.g.cs
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -43,5 +46,3 @@ C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Red
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Redat.Website.dll
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Redat.Website.pdb
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Redat.Website.genruntimeconfig.cache
-C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
-C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Release\netcoreapp3.1\Razor\Views\Home\Gallery.cshtml.g.cs

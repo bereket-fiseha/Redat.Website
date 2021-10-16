@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Redat.Website.csproj",
+  "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Redat.Website.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,63 +14402,63 @@
   "RootNamespace": "Redat.Website",
   "Documents": [
     {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Patient\\Register.cshtml",
-      "TargetPath": "Views\\Patient\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Home\\RequestMedicalService.cshtml",
-      "TargetPath": "Views\\Home\\RequestMedicalService.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Shared\\_NavBar.cshtml",
-      "TargetPath": "Views\\Shared\\_NavBar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Home\\About.cshtml",
-      "TargetPath": "Views\\Home\\About.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Home\\Gallery.cshtml",
-      "TargetPath": "Views\\Home\\Gallery.cshtml",
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Home\\RequestMedicalService.cshtml",
+      "TargetPath": "Views\\Home\\RequestMedicalService.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Patient\\Register.cshtml",
+      "TargetPath": "Views\\Patient\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Home\\Gallery.cshtml",
+      "TargetPath": "Views\\Home\\Gallery.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Files\\Redat Website\\Redat.Website\\Redat.Website\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Shared\\_NavBar.cshtml",
+      "TargetPath": "Views\\Shared\\_NavBar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Files\\Exp\\DevOps\\Git test\\Redat.Website\\Redat.Website\\Views\\Home\\About.cshtml",
+      "TargetPath": "Views\\Home\\About.cshtml",
       "FileKind": "mvc"
     }
   ],

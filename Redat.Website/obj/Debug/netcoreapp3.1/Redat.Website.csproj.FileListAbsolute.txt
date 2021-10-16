@@ -45,3 +45,4 @@ C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Debug\netcoreapp3.1\Redat
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Debug\netcoreapp3.1\Redat.Website.dll
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Debug\netcoreapp3.1\Redat.Website.pdb
 C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Debug\netcoreapp3.1\Redat.Website.genruntimeconfig.cache
+C:\Files\Redat Website\Redat.Website\Redat.Website\obj\Debug\netcoreapp3.1\Redat.Website.csproj.AssemblyReference.cache
